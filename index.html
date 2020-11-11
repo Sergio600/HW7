@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+
+    <style>
+        .head {
+            display: flex;
+            width: 900px;
+            border: 1px solid grey;
+            margin-top: 20px;
+        }
+        
+        .head>div {
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid grey;
+        }
+        
+        #container>div>div,
+        #choosedCountry>div>div {
+            border: 1px solid grey;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerForm">
+        <form class="form-1">
+            <input id="userInput" type="text" placeholder="Введите название страны"></input>
+            <input id="search" type="button" value="Поиск" onclick="searchBtn(userInput.value)"> </input>
+            <input id="restartBtn" type="button" value="Сброс фильтров" onclick="userInput.value='', resetBtn()"></input>
+        </form>
+    </div>
+
+    <div class="head">
+        <div>Country</div>
+        <div>Population</div>
+        <div>Flag</div>
+        <div>Time zone</div>
+    </div>
+
+    <div id="container"></div>
+    <div id="choosedCountry"></div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
