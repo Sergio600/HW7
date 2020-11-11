@@ -19,10 +19,10 @@ $.ajax({
             divFlag.innerHTML = `<img width = 50px src = "${countrty.flag}"></img>`;
             divTimeZone.innerText = countrty.timezones;
 
-            divCountry.style = "width: 200px";
-            divPopulation.style = "width: 200px";
-            divFlag.style = "width: 200px";
-            divTimeZone.style = "width: 200px";
+            divCountry.style = "width: 100px";
+            divPopulation.style = "width: 100px";
+            divFlag.style = "width: 100px";
+            divTimeZone.style = "width: 100px; word-wrap: break-word";
 
             divContainerOfCountry.appendChild(divCountry);
             divContainerOfCountry.appendChild(divPopulation);
@@ -50,7 +50,7 @@ function searchBtn(value) {
 
     for (let country of data1) {
         if (value == country.name) {
-            console.log("We find!");
+            console.log("We found!");
 
             let divContainerOfCountry = document.createElement('div');
             let divCountry = document.createElement('div');
@@ -63,10 +63,10 @@ function searchBtn(value) {
             divFlag.innerHTML = `<img width = 50px src = "${country.flag}"></img>`;
             divTimeZone.innerText = country.timezones;
 
-            divCountry.style = "width: 200px; height: 50px";
-            divPopulation.style = "width: 200px; height: 50px";
-            divFlag.style = "width: 200px; height: 50px";
-            divTimeZone.style = "width: 200px; height: 50px";
+            divCountry.style = "width: 100px";
+            divPopulation.style = "width: 100px";
+            divFlag.style = "width: 100px";
+            divTimeZone.style = "width: 100px; word-wrap: break-word";
 
 
             divContainerOfCountry.appendChild(divCountry);
