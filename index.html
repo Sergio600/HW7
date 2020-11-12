@@ -23,8 +23,8 @@
         }
         
         .head>div {
-            width: 80px;
-            min-width: 80px;
+            width: 70px;
+            min-width: 70px;
             text-align: center;
             padding: 10px;
         }
@@ -41,7 +41,7 @@
 <body>
     <div class="containerForm">
         <form class="form-1">
-            <input id="userInput" type="text" placeholder="Введите название страны"></input>
+            <input id="userInput" type="text" placeholder="Введите название страны" oninput="searchOnInput(this.value)"></input>
             <input id="search" type="button" value="Поиск" onclick="searchBtn(userInput.value)"> </input>
             <input id="restartBtn" type="button" value="Сброс фильтров" onclick="userInput.value='', resetBtn()"></input>
         </form>

@@ -19,6 +19,7 @@ $.ajax({
 
 function searchBtn(value) {
     container.style = "display: none;"
+    choosedCountry.innerHTML = "";
     let isFind = false;
 
     for (let country of data1) {
@@ -35,9 +36,7 @@ function searchBtn(value) {
 }
 
 function resetBtn() {
-    let container = $("#container")[0];
     container.style = "display: block;"
-    let choosedCountry = $("#choosedCountry")[0];
     choosedCountry.innerHTML = "";
 }
 
@@ -53,10 +52,10 @@ function displayInformation(country) {
     divFlag.innerHTML = `<img width = 50px src = "${country.flag}"></img>`;
     divTimeZone.innerText = country.timezones;
 
-    divCountry.style = "width: 80px; min-width: 80px";
-    divPopulation.style = "width: 80px; min-width: 80px";
-    divFlag.style = "width: 80px; min-width: 80px";
-    divTimeZone.style = "width: 80px; word-wrap: break-word; min-width: 80px";
+    divCountry.style = "width: 70px; min-width: 70px";
+    divPopulation.style = "width: 70px; min-width: 70px";
+    divFlag.style = "width: 70px; min-width: 70px";
+    divTimeZone.style = "width: 70px; word-wrap: break-word; min-width: 70px";
 
 
     divContainerOfCountry.appendChild(divCountry);
@@ -67,5 +66,23 @@ function displayInformation(country) {
     divContainerOfCountry.style = "display: flex";
 
     return divContainerOfCountry;
+
+}
+
+function searchOnInput(value) {
+    choosedCountry.innerHTML = "";
+    console.log(value);
+    container.style = "display: none;"
+
+    for (let country of data1) {
+        if (country.name.toLowerCase().includes(value.toLowerCase())) {
+            // if (value.toLowerCase() == country.name.toLowerCase()) {
+
+            choosedCountry.appendChild(displayInformation(country));
+
+
+        }
+    }
+
 
 }
